@@ -184,7 +184,7 @@ function g_rebaseMe() {
   echo "Current branch: '$currentBranch', switching to master..."
   
   gcm
-  gl
+  gll
   echo "Back to '$currentBranch'..."
   gco $currentBranch
   g rebase master
