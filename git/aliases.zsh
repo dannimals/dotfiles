@@ -203,3 +203,8 @@ function g_rebaseMaster() {
   g rebase master
 }
 
+function p_installUpdates() {
+  figlet 'Pod install with repo updates!'
+
+  pod install --repo-update
+}
