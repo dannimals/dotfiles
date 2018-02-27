@@ -179,7 +179,20 @@ function g.currentBranch {
   echo ${br/* /}
 }
 
-function g_rebaseMe() {
+function g_rebaseDevelop() {
+  figlet "REBASE OFF DEVELOP TIME!"
+
+  currentBranch=`g.currentBranch`
+  echo "Current branch: '$currentBranch', switching to develop..."
+
+  gco develop
+  gll
+  echo "Back to '$currentBranch'..."
+  gco $currentBranch
+  g rebase develop
+}
+
+function g_rebaseMaster() {
   figlet "REBASE OFF MASTER TIME!"
 
   currentBranch=`g.currentBranch`
@@ -192,3 +205,8 @@ function g_rebaseMe() {
   g rebase master
 }
 
+function p_installUpdates() {
+  figlet 'Pod install with repo updates!'
+
+  pod install --repo-update
+}
