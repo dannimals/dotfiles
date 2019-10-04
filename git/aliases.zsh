@@ -164,6 +164,8 @@ alias gignore='git update-index --assume-unchanged'
 alias gunignore='git update-index --no-assume-unchanged'
 # list temporarily ignored files
 alias gignored='git ls-files -v | grep "^[[:lower:]]"'
+alias mvbranch= 'git branch -m $1 $2; git push origin :$1; git push --set-upstream origin $2; }; moveit"'
+
 
 # Rebase branch on master
 function colorTail() {
