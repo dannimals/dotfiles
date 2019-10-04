@@ -101,6 +101,8 @@ alias gsta='git stash'
 alias gstp='git stash pop'
 alias gstd='git stash drop'
 
+alias apply-gitignore='git ls-files -ci --exclude-standard -z | xargs -0 git rm --cached'
+
 # Will cd into the top of the current repository
 # or submodule.
 alias grt='cd $(git rev-parse --show-toplevel || echo ".")'
@@ -197,7 +199,7 @@ function g_rebaseMaster() {
 
   currentBranch=`g.currentBranch`
   echo "Current branch: '$currentBranch', switching to master..."
-  
+
   gcm
   gll
   echo "Back to '$currentBranch'..."
