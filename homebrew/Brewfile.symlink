@@ -28,20 +28,23 @@ brew 'findutils'
 ###
 #
 ## Core
-#cask '1password'
+cask '1password'
 #cask 'alfred'
 #cask 'firefox'
-#cask 'google-chrome'
-#cask 'iterm2'
+cask 'google-chrome'
+cask 'iterm2'
 #
 ## Beer
 #cask 'beersmith2'
 #
 ## Communication
 #cask 'skype'
-#cask 'slack'
+cask 'slack'
 #
 ## Development
+cask 'sketch'
+cask 'sublime-text'
+cask 'zeplin'
 #cask 'appcode'
 #cask 'atom'
 #cask 'balsamiq-mockups'
@@ -60,7 +63,7 @@ brew 'findutils'
 #cask 'steam'
 #
 ## Media
-#cask 'spotify'
+cask 'spotify'
 #cask 'vlc'
 #
 ## Productivity
