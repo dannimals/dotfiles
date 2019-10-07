@@ -168,7 +168,7 @@ alias gunignore='git update-index --no-assume-unchanged'
 alias gignored='git ls-files -v | grep "^[[:lower:]]"'
 alias mvbranch= 'git branch -m $1 $2; git push origin :$1; git push --set-upstream origin $2; }; moveit"'
 
-
+alias bi='bundle install'
 # Rebase branch on master
 function colorTail() {
   tail -f $1 | awk '
@@ -181,7 +181,7 @@ function g.currentBranch {
   echo ${br/* /}
 }
 
-function g_rebaseDevelop() {
+function gbd() {
   figlet "REBASE OFF DEVELOP TIME!"
 
   currentBranch=`g.currentBranch`
@@ -194,7 +194,7 @@ function g_rebaseDevelop() {
   g rebase develop
 }
 
-function g_rebaseMaster() {
+function gbm() {
   figlet "REBASE OFF MASTER TIME!"
 
   currentBranch=`g.currentBranch`
@@ -207,7 +207,14 @@ function g_rebaseMaster() {
   g rebase master
 }
 
-function p_installUpdates() {
+function gtp() {
+  figlet "NEW TAG"
+
+  g tag $1
+  gpt
+}
+
+function pi() {
   figlet 'Pod install with repo updates!'
 
   pod install --repo-update
