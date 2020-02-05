@@ -182,6 +182,17 @@ function g.currentBranch {
   echo ${br/* /}
 }
 
+func grb() {
+  currentBranch=`g.currentBranch`
+  echo "Current branch: '$currentBranch', switching to "$1"..."
+
+  gco "$1"
+  gll
+  echo "Back to '$currentBranch'..."
+  gco $currentBranch
+  g rebase "$1"
+}
+
 function gbd() {
   figlet "REBASE OFF DEVELOP TIME!"
 
@@ -219,4 +230,10 @@ function pi() {
   figlet 'Pod install with repo updates!'
 
   pod install --repo-update
+}
+
+function mkbranch() {
+  local TICKET="$1-"
+  local NAME="$2"
+  git checkout -b dg/IOS-$TICKET$NAME
 }
