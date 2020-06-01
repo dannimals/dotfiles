@@ -87,6 +87,7 @@ alias gclean='git reset --hard && git clean -dfx'
 alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 alias gf='git fetch --all --prune'
 alias gcd='git checkout develop'
+alias gemp='git commit --allow-empty -m'
 
 alias gpoat='git push origin --all && git push origin --tags'
 alias gmt='git mergetool --no-prompt'
@@ -182,7 +183,7 @@ function g.currentBranch {
   echo ${br/* /}
 }
 
-func grb() {
+func rebbran() {
   currentBranch=`g.currentBranch`
   echo "Current branch: '$currentBranch', switching to "$1"..."
 
@@ -193,7 +194,7 @@ func grb() {
   g rebase "$1"
 }
 
-function gbd() {
+function rebdev() {
   figlet "REBASE OFF DEVELOP TIME!"
 
   currentBranch=`g.currentBranch`
@@ -206,7 +207,7 @@ function gbd() {
   g rebase develop
 }
 
-function gbm() {
+function rebmas() {
   figlet "REBASE OFF MASTER TIME!"
 
   currentBranch=`g.currentBranch`
