@@ -77,7 +77,6 @@ alias gss='git status -s'
 compdef _git gss=git-status
 alias ga='git add'
 compdef _git ga=git-add
-alias g_addAllCommit="ga .; gcmsg"
 alias gap='git add --patch'
 alias gm='git merge'
 compdef _git gm=git-merge
@@ -233,8 +232,14 @@ function pi() {
   pod install --repo-update
 }
 
-function mkbranch() {
+function mkb() {
   local TICKET="$1-"
   local NAME="$2"
   git checkout -b dg/IOS-$TICKET$NAME
+}
+
+function gall() {
+  local COMMIT="$1"
+  git add .
+  git commit -m COMMIT
 }
