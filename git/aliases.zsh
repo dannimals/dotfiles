@@ -13,6 +13,7 @@ compdef _git gl=git-pull
 alias gup='git pull --rebase'
 compdef _git gup=git-fetch
 alias gp='git push'
+alias gpff='git push --force'
 compdef _git gp=git-push
 alias gpt='git push --tags'
 compdef _git gpt=git-push
@@ -239,7 +240,7 @@ function mkb() {
 }
 
 function gall() {
-  local COMMIT="$1"
+  local COMMIT="$@"
   git add .
   git commit -m $COMMIT
 }
