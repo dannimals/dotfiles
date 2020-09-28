@@ -241,5 +241,5 @@ function mkb() {
 function gall() {
   local COMMIT="$1"
   git add .
-  git commit -m COMMIT
+  git commit -m $COMMIT
 }
