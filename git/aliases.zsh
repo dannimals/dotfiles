@@ -90,7 +90,7 @@ alias grhh='git reset HEAD --hard'
 alias gclean='git reset --hard && git clean -dfx'
 alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 alias gf='git fetch --all --prune'
-
+alias gall='git add --all && git commit -m'
 alias gpoat='git push origin --all && git push origin --tags'
 alias gmt='git mergetool --no-prompt'
 compdef _git gm=git-mergetool

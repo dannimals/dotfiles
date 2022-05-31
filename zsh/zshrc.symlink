@@ -11,13 +11,13 @@ antigen use oh-my-zsh
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle autojump
 antigen bundle extract
-antigen bundle osx
+antigen bundle macos
 
 # Done
 antigen apply
 
 ######################################## Zplug #######################################
-export ZPLUG_HOME=/usr/local/opt/zplug
+export ZPLUG_HOME=$(brew --prefix)/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
 zplug "zsh-users/zsh-history-substring-search"
@@ -96,4 +96,4 @@ unset config_files
  }
 
 # Rbenv
-eval "$(rbenv init -)"
+eval "$(rbenv init - zsh)"
