@@ -94,7 +94,7 @@ alias gall='git add --all && git commit -m'
 alias gpoat='git push origin --all && git push origin --tags'
 alias gmt='git mergetool --no-prompt'
 compdef _git gm=git-mergetool
-
+alias gcd='git checkout develop'
 alias gg='git gui citool'
 alias gga='git gui citool --amend'
 alias g_ammendAll="ga .; g commit --amend --no-edit"
@@ -184,9 +184,7 @@ function g.currentBranch {
   echo ${br/* /}
 }
 
-function g_rebase_me() {
-  figlet "REBASE OFF MAIN TIME!"
-
+function rmain() {
   currentBranch=`g.currentBranch`
   echo "Current branch: '$currentBranch', switching to main..."
 
@@ -197,7 +195,18 @@ function g_rebase_me() {
   g rebase main
 }
 
-function g_make_branch() {
+function rdev() {
+  currentBranch=`g.currentBranch`
+  echo "Current branch: '$currentBranch', switching to develop..."
+
+  gco develop
+  gl
+  echo "Back to '$currentBranch'..."
+  gco $currentBranch
+  g rebase develop
+}
+
+function mkb() {
   input=$@
   result=${input// /-}
   gco -b $result
