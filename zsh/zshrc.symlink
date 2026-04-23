@@ -98,3 +98,10 @@ unset config_files
 
 # Rbenv
 eval "$(rbenv init - zsh)"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
+
+alias cdc='claude --dangerously-skip-permissions'
+
+# Local secrets (not tracked in dotfiles)
+[ -f ~/.secrets ] && source ~/.secrets

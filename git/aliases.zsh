@@ -97,7 +97,7 @@ compdef _git gm=git-mergetool
 alias gcd='git checkout develop'
 alias gg='git gui citool'
 alias gga='git gui citool --amend'
-alias g_ammendAll="ga .; g commit --amend --no-edit"
+alias gamen="ga .; g commit --amend --no-edit"
 alias gk='gitk --all --branches'
 
 alias gsts='git stash show --text'
