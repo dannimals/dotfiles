@@ -30,6 +30,17 @@ files in there. Anything with an extension of `.zsh` will get automatically
 included into your shell. Anything with an extension of `.symlink` will get
 symlinked without extension into `$HOME` when you run `script/bootstrap`.
 
+## secrets
+
+Some tools expect secrets that are not tracked in this repo. After bootstrapping, create `~/.secrets` and add any tokens there:
+
+```sh
+# ~/.secrets — not tracked in dotfiles
+export JIRA_TOKEN="..."
+```
+
+This file is sourced automatically by `~/.zshrc` if it exists.
+
 ## components
 
 There's a few special files in the hierarchy.

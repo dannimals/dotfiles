@@ -157,3 +157,8 @@ source "$HOME/.dotfiles/script/install"
 
 echo ''
 echo '  All installed!  Restart your shell.'
+echo ''
+if [ ! -f "$HOME/.secrets" ]; then
+  echo '  ⚠  Remember to create ~/.secrets with any local tokens (e.g. JIRA_TOKEN).'
+  echo '     See README.md for details.'
+fi
