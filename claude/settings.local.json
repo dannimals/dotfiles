@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(update-config)",
+      "Bash(/opt/homebrew/bin/node --version)",
+      "Bash(/opt/homebrew/bin/npx --version)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d.get\\('mcpServers', {}\\), indent=2\\)\\)\")",
+      "Bash(npm install:*)",
+      "mcp__github__pull_request_read",
+      "mcp__github__get_file_contents",
+      "mcp__github__search_repositories",
+      "mcp__github__search_code",
+      "mcp__github__list_issues",
+      "mcp__github__list_commits",
+      "Bash(find /Users/danningge/ios-client -name \"*.swift\" -exec grep -l \"class ApolloService\\\\|struct ApolloService\" {} \\\\;)",
+      "Bash(git add *)",
+      "Bash(grep -E \"\\\\.swift$\")",
+      "Bash(find /Users/danningge/ios-client -name \"*.swift\" -type f -exec grep -l \"applySnapshotReconfiguringPotentiallyUpdatedItems\" {} \\\\;)",
+      "Bash(subl *)"
+    ]
+  }
+}
