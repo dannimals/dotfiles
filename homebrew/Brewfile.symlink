@@ -22,3 +22,9 @@ brew 'autojump'
 brew 'coreutils'
 brew 'findutils'
 # brew 'cowsay'
+
+##
+# Casks
+##
+
+cask 'claude-code'
