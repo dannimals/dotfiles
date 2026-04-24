@@ -37,6 +37,7 @@ link_claude_file "$CLAUDE_DOTFILES/statusline-command.sh" "$CLAUDE_DIR/statuslin
 link_claude_file "$CLAUDE_DOTFILES/skills/bump-version/SKILL.md" "$CLAUDE_DIR/skills/bump-version/SKILL.md"
 link_claude_file "$CLAUDE_DOTFILES/skills/open-pr/SKILL.md"      "$CLAUDE_DIR/skills/open-pr/SKILL.md"
 link_claude_file "$CLAUDE_DOTFILES/skills/review-pr/SKILL.md"    "$CLAUDE_DIR/skills/review-pr/SKILL.md"
+link_claude_file "$CLAUDE_DOTFILES/skills/weekly-sum/SKILL.md"   "$CLAUDE_DIR/skills/weekly-sum/SKILL.md"
 
 link_claude_file "$CLAUDE_DOTFILES/agents/bug-fixer.md"               "$CLAUDE_DIR/agents/bug-fixer.md"
 link_claude_file "$CLAUDE_DOTFILES/agents/code-improvement-advisor.md" "$CLAUDE_DIR/agents/code-improvement-advisor.md"
