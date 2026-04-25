@@ -16,7 +16,24 @@
       "Bash(git add *)",
       "Bash(grep -E \"\\\\.swift$\")",
       "Bash(find /Users/danningge/ios-client -name \"*.swift\" -type f -exec grep -l \"applySnapshotReconfiguringPotentiallyUpdatedItems\" {} \\\\;)",
-      "Bash(subl *)"
+      "Bash(subl *)",
+      "Read(//opt/homebrew/Cellar/vim/9.2.0350/bin/**)",
+      "Read(//usr/local/bin/**)",
+      "Bash(brew --prefix)",
+      "Bash(echo \"brew prefix: $\\(brew --prefix 2>/dev/null\\)\")",
+      "Bash(gh repo *)",
+      "Bash(python3 -m json.tool)",
+      "Bash(python3 -m json.tool ~/.claude/settings.json)",
+      "Bash(python3 -m json.tool ~/.claude/settings.local.json)",
+      "Bash(python3 *)",
+      "Bash(ls -la /Users/danningge/.claude/cache/**/*)",
+      "Bash(npx --version)",
+      "Read(//opt/homebrew/bin/**)",
+      "Bash(ls /usr/local/bin/npx*)",
+      "Bash(ls ~/.nvm/versions/node/*/bin/npx)",
+      "Bash(command -v node)",
+      "Read(//opt/homebrew/**)",
+      "Read(//opt/**)"
     ]
   }
 }

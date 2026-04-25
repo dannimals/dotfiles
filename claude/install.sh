@@ -41,3 +41,6 @@ link_claude_file "$CLAUDE_DOTFILES/skills/weekly-sum/SKILL.md"   "$CLAUDE_DIR/sk
 
 link_claude_file "$CLAUDE_DOTFILES/agents/bug-fixer.md"               "$CLAUDE_DIR/agents/bug-fixer.md"
 link_claude_file "$CLAUDE_DOTFILES/agents/code-improvement-advisor.md" "$CLAUDE_DIR/agents/code-improvement-advisor.md"
+
+# Register MCP servers
+"$CLAUDE_DOTFILES/setup-mcp.sh"

@@ -105,3 +105,4 @@ alias cdc='claude --dangerously-skip-permissions'
 
 # Local secrets (not tracked in dotfiles)
 [ -f ~/.secrets ] && source ~/.secrets
+export GITHUB_TOKEN=$github_token

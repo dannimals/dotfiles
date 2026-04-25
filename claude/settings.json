@@ -39,5 +39,11 @@
       }
     }
   },
-  "skipDangerousModePermissionPrompt": true
+  "skipDangerousModePermissionPrompt": true,
+  "allowedMcpServers": [
+    {"serverName": "xcodebuildmcp"},
+    {"serverName": "filesystem"},
+    {"serverName": "atlassian"},
+    {"serverName": "github"}
+  ]
 }
