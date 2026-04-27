@@ -23,7 +23,7 @@ source $ZPLUG_HOME/init.zsh
 zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-autosuggestions"
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 
 # Set the priority when loading
 # e.g., zsh-syntax-highlighting must be loaded
@@ -97,7 +97,7 @@ unset config_files
  }
 
 # Rbenv
-eval "$(rbenv init - zsh)"
+command -v rbenv &>/dev/null && eval "$(rbenv init - zsh)"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 

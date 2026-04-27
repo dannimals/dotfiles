@@ -1,49 +1,18 @@
 {
-  "statusLine": {
-    "type": "command",
-    "command": "sh /Users/danningge/.claude/statusline-command.sh"
-  },
-  "enabledPlugins": {
-    "swift-lsp@claude-plugins-official": true
-  },
   "mcpServers": {
-    "xcodebuildmcp": {
-      "command": "/opt/homebrew/bin/npx",
-      "args": [
-        "-y",
-        "xcodebuildmcp@latest"
-      ]
-    },
-    "atlassian": {
-      "type": "http",
-      "url": "https://mcp.atlassian.com/v1/mcp"
-    },
     "filesystem": {
-      "command": "/opt/homebrew/bin/npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-filesystem",
-        "/Users/danningge/ios-client",
-        "/Users/danningge/fcpx-panel",
-        "/Users/danningge/swift-sdk",
-        "/Users/danningge/swift-ui-components",
-        "/Users/danningge/frame-tv",
-        "/Users/danningge/swift-player"
-      ]
-    },
-    "github": {
-      "type": "http",
-      "url": "https://api.githubcopilot.com/mcp/",
-      "headers": {
-        "Authorization": "${GITHUB_TOKEN}"
-      }
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/Users/danningge"]
     }
   },
-  "skipDangerousModePermissionPrompt": true,
   "allowedMcpServers": [
     {"serverName": "xcodebuildmcp"},
     {"serverName": "filesystem"},
     {"serverName": "atlassian"},
     {"serverName": "github"}
-  ]
+  ],
+  "statusLine": {
+    "type": "command",
+    "command": "sh /Users/danningge/.claude/statusline-command.sh"
+  }
 }
